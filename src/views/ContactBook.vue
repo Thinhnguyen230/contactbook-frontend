@@ -40,8 +40,7 @@
 import ContactCard from '@/components/ContactCard.vue';
 import InputSearch from '@/components/InputSearch.vue';
 import ContactList from '@/components/ContactList.vue';
-import { contactService } from '@/services/contact.service';
-
+import Notfound from '@/components/Notfound.vue';
 export default {
     components: {
         ContactCard,

@@ -7,6 +7,11 @@ const routes = [
         name: 'contactbook',
         component: ContactBook,
     },
+    {
+        path: '/:pathMath(.*)*',
+        name: "notfound",
+        component: () => import('@views/Notfound.vue'),
+    }
 ];
 
 const router = createRouter({
@@ -14,3 +19,4 @@ const router = createRouter({
     routes,
 });
 export default router;
+
