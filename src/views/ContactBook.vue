@@ -32,6 +32,20 @@
                 <i class="fas fa-address-card" />   
             </h4>
             <ContactCard :contact="activeContact" />
+            <router-link :to="{
+                name: 'contact.edit',
+                params: { id: activeContact.id },
+                }">
+                    <span class="mt-2 badge badge-warning">
+                        <i class="fas fa-edit" /> Hiệu chỉnh</span>
+                </router-link>
+            <router-link :to="{
+                name: 'contact.add',
+                params: { id: activeContact.id },
+                }">
+                    <span class="mt-2 badge badge-warning">
+                        <i class="fas fa-edit" /> Thêm vào</span>
+                </router-link>
         </div>
     </div>
 </div>
@@ -40,7 +54,6 @@
 import ContactCard from '@/components/ContactCard.vue';
 import InputSearch from '@/components/InputSearch.vue';
 import ContactList from '@/components/ContactList.vue';
-import Notfound from '@/components/Notfound.vue';
 export default {
     components: {
         ContactCard,
